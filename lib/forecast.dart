@@ -71,26 +71,3 @@ class Forecast extends StatelessWidget {
         ));
   }
 }
-
-getIcon(String code) {
-  var asset = 'images/';
-  if (code == '01d') {
-    asset += 'sunny.png';
-  } else if (code == '01n') {
-    asset += 'moon.png';
-  } else if (['02d', '03d', '04d'].contains(code)) {
-    asset += 'partly-sunny.png';
-  } else if (['02n', '03n', '04n'].contains(code)) {
-    asset += 'partly-cloudy-moon.png';
-  } else if (code == '10d') {
-    asset += 'drizzle.png';
-  } else if (code == '13d') {
-    asset += 'heavy-snow.png';
-  } else if (code == '11d') {
-    asset += 'lightning.png';
-  } else {
-    asset += 'thermometer.png';
-  }
-
-  return Image.asset(asset, fit: BoxFit.contain, height: 35.0);
-}
